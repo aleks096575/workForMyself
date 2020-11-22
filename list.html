@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	
+
+	<script type="text/javascript">
+
+    function sum(n) {
+        
+    	return function boo() {
+    		console.log(1000 * n)
+    	}
+    
+    }
+    
+    var a = 27;
+    sum(a)();
+
+    var count = 0;
+
+    function counter(element) {
+    	element.innerHTML = "You are hover on it " + count + " time";
+    	count++;
+    }	
+
+	</script>
+
+	<span onmouseover="counter (this)">You have been hover on it 0 time</span>
+
+</body>
+</html>
