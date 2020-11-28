@@ -26,13 +26,50 @@
     function counter(element) {
     	element.innerHTML = "You are hover on it " + count + " time";
     	count++;
-    }	
+    }
+
+    const person = Object.create(
+    	{},
+    	{
+    		name: {
+    			value: 'Aleks',
+    			enumerable: true,
+    			writable: true,
+    			configurable: true
+    		},
+    		birthYear: {
+    			value: 1988,
+    			enumerable: true
+    		},
+    		age: {
+    			get() {
+    				return new Date().getFullYear() - this.birthYear
+    			},
+    			set(value) {
+    				document.body.style.background = 'red'
+    				console.log('Set age', value)
+    			}
+    		}
+    	  }
+    	)
+
+    for (let key in person) {
+    	console.log('Person', key, person[key])
+    }
+
+    console.log(new Date)
+    
+
+
 
 	</script>
 
 	<span onmouseover="counter (this)">You have been hover on it 0 time</span>
 
 	<a href="https://facebook.com" onclick="document.location='https://www.w3schools.com/js/';return false">ПОЛЕЗНЫЙ САЙТ</a>
+
+
+	<iframe src="https://zloekino.su" height="333px" width="600px"></iframe>
 
 </body>
 </html>
