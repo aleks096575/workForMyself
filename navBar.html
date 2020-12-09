@@ -4,11 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 <script async src="index.js">
 
   let digs = [1, 21, 100, 3, 9, 54];
-let pr = digs.reduce((pr, crent) => pr*crent, 1);
-$('body'.)append(pr);
+  let pr = digs.reduce((pr, crent) => pr*crent, 1);
+  $('section').append(pr);
 
 </script>
 
@@ -99,7 +100,7 @@ body {
 </section>
 
 <script>
-  
+
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
