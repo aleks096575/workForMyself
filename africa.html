@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let str = 'nejbfjb';
+		console.log(str[0]);
+		console.log(str.length);
+
+		for (let i = 0; i < str.length; i++) {
+			console.log(str[i].toUpperCase());
+		}
+
+
+     var arr = [1, 2, 3, 7, 5];
+     function getSum(arr) {
+     	var result = [];
+     	if (!arr.length) return result;
+
+     	var totalSum = arr.reduce(function(sum, item, i, arr) {
+     		result.push(sum);
+     		return sum + item;
+     	});
+     	result.push(totalSum);
+
+     	return result;
+     }
+     var s = getSum(arr);
+     console.log(s);
+
+
+
+
+	</script>
+
+	<p>alt + f4 = close</p>
+	
+</body>
+</html>
