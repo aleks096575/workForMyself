@@ -15,9 +15,9 @@
 			console.log(str[i].toUpperCase());
 		}
 
-
+	 var arr1 = [7, 9, 88, 9, 223, 10, 1, 11, +true]
      var arr = [1, 2, 3, 7, 5];
-     function getSum(arr) {
+     function getSum(arr, arr1) {
      	var result = [];
      	if (!arr.length) return result;
 
@@ -29,8 +29,10 @@
 
      	return result;
      }
+     var o = getSum(arr1);
      var s = getSum(arr);
      console.log(s);
+     console.log(o);
 
 
 
