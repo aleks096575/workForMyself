@@ -1,0 +1,1020 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./css/main.css">
+   <title>Cherry</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <style>
+
+   *{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    min-width: 320px;
+    font-family: "Arial", sans-serif;
+}
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+.main {
+    color: #5c646e;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    background-color: #f3f3f3;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.container {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.red {
+    color: #ae4b5d;
+    font-style: normal;
+}
+
+
+/********START HEADER***********/
+.header-bg {
+    background: linear-gradient(to top, #272a32, #333b47);
+}
+
+.logo-wrapper {
+    float: left;
+    padding: 24px 12px 6px 8px;
+}
+
+.logo {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    color: #a5adb8;
+    font-family: "Arial", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.logo i {
+    color: #ae4b5d;
+    font-style: normal;
+}
+.form-serch {
+    float: right;
+    margin: 17px 8px;
+}
+
+.search {
+    width: 300px;
+    position: relative;
+}
+.search input {
+    border: 1px solid #ae4b5d;
+    background: #353c40;
+    border-radius: 5px;
+    color: #757b84;
+}
+
+.input {
+    float: left;
+}
+
+.search .input {
+    width: 197px;
+    padding: 12px 33px 7px 10px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 56px;
+}
+
+.search .submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 37px;
+    height: 100%;
+    background: #ae4b5d;
+    cursor: pointer;
+}
+
+.submit {
+    float: right;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: 1px solid #ae4b5d;
+}
+.header-wrapper button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 13px;
+    color: #F9F0DA;
+}
+
+.submit i {
+    color: #fff;
+}
+.input::placeholder{
+    color: #fff;}
+/********END HEADER***********/
+
+
+/***********START BANNER***********/
+.banner-wrapper {
+    height: 239px;
+    position: relative;
+}
+
+.banner-inner-wrapper {
+    padding: 43px 0 39px 39px;
+    width: 100%;
+}
+.banner-inner-wrapper h1{
+    color: #757b84;
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35px;
+}
+.banner-inner-wrapper .sub-title{
+    color: #282d33;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 14px;
+}
+.banner-inner-wrapper h2 {
+    color: #a5adb8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 21px;
+    margin-bottom: 4px;
+}
+
+.banner-bg {
+    background: #000 url("../img/slide.jpg") no-repeat center;
+    background-size: cover;
+}
+.banner-inner-wrapper,p.text {
+    color: #e7ebef;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+}
+/***********END BANNER***********/
+
+/* START   NAVIGATION*/
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+    font-size: 0;
+    display:block;
+}
+
+.nav > li:first-child {
+    margin-left: 0;
+}
+
+.nav > li {
+    margin: 0 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.nav > li > a {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 5px;
+}
+
+.nav-bg {
+    background: #930015;
+}
+/*****END   NAVIGATION**************/
+
+/********START************breadcrumbs*/
+.breadcrumbs {
+    padding: 1px 0;
+}
+.breadcrumb {
+    display: inline-block;
+    margin: 0;
+    padding: 0  0 0 20px;
+    font-size: 0px;
+    list-style: none;
+}
+.breadcrumb li {
+    margin: 0 1px 0 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    font-size: 10px;
+}
+.breadcrumb li a {
+    color: #982b28;
+}
+.breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+.breadcrumb li a.active {
+    text-decoration: none;
+    color: #ccc;
+}
+/******END**************breadcrumbs*/
+
+/***********************************START MAIN CONTENT***************************/
+
+
+/********** START ASIDE***************/
+
+
+aside {
+    padding: 0px 0px 0 2px;
+    width: 215px;
+    float: left;
+}
+
+.aside-wrapper{
+    padding:20px 15px;
+}
+
+.forma {
+    width: 215px;
+    position: relative;
+}
+#contact h2 {
+    margin-left: -10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+#contact input, #contact textarea, #contact button[type="submit"] {
+    font: 400 12px/16px "Arial", sans-serif;
+}
+
+#contact {
+    background: #f3f3f3;
+    border: 2px solid #dadde0;
+    padding: 25px;
+}
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="day"],
+#contact input[type="city"],
+#contact textarea {
+    width: 187px;
+    color: #757575;
+    border: 1px solid white;
+    background: #e3e4e5;
+    margin: 0 -13px 5px;
+    padding: 10px;
+    height: 32px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 3px 3px #d0d1d1 inset;
+
+}
+#contact select {
+    width: 187px;
+    border-radius: 5px 5px 5px 5px;
+    height: 32px;
+    color: #757575;
+    padding: 3px;
+    border: 1px solid #93989c;
+    background: #e3e4e5;
+    margin: 0 -13px 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+#contact select {
+    overflow: hidden;
+    background: url(../img/arrow.png) no-repeat right #ddd;
+    background-position: 95% 50%;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="day"]:hover,
+#contact input[type="city"]:hover,
+#contact textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+}
+
+#contact textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+#contact button[type="submit"] {
+    cursor: pointer;
+    text-shadow: 1px 1px 2px black;
+    font-size: 16px;
+    width: 177px;
+    background: #a9212a;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 5px 5px #d0d1d1;
+    border: 5px solid white;
+    margin: 0 -13px 0px;
+}
+#contact button[type="submit"]:hover {
+    background: #a9212a;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+#contact input:focus,
+#contact textarea:focus {
+    outline: 0;
+    border: 1px solid #aaa;
+}
+.block_text {
+    width: 215px;
+    height: 190px;
+    margin-top: 25px;
+    margin-left: 22px;
+}
+.column_text{
+    margin-left: -20px;
+}
+.column_text p{
+    margin-top: 20px;
+}
+.block_text .title_col {
+    font-size: 18px;
+    color: #282d33;
+
+}
+
+/**************CONTENT********************/
+.content {
+    padding-left: 260px;
+    padding-right: 15px;
+}
+.content-wrapper{
+    padding: 15px;
+    background: #ffffff;
+    margin-bottom: 44px;
+}
+.content-wrapper .post__headline {
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.post__headline i {
+    color: #982b28;
+    font-weight:700;
+    font-style: normal;
+}
+.we-do{
+    padding-bottom: 18px;
+    margin-top: -16px;
+}
+.we-do p{
+    /*    padding: 0 5px;*/
+}
+.wrapper-inner-item img {
+    border: 1px solid white;
+    box-shadow: 0 7px 7px #bbbbbb;
+    max-width: 500px;
+}
+a.red{
+    text-decoration: underline;
+}
+.content-posts list {
+    margin-top: 20px;
+}
+
+.list-items {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.list-items li {
+    /* padding: 5px 3px;*/
+    display: inline-block
+}
+.title-item{
+    color: #282d33;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 14px;
+    padding: 10px 0;
+
+}
+.midle{
+    margin:0 19px;}
+
+/*------------List----------------*/
+.list {
+
+}
+
+.list-inner-wrapper {
+}
+
+.list-col {
+    float: left;
+    width: 200px;
+    padding: 0 15px;
+}
+list_ul {
+    margin-left: 15px;
+}
+
+.list-col ul {
+    /* width:200px;*/
+    margin-left: 15px;
+    padding: 0;
+}
+
+.list-col ul li {
+    list-style: initial;
+
+}
+.list-col ul .unstyled{
+    list-style: none;
+}
+ul li .list-col-inner{
+    padding-left:20px;
+}
+
+.list-col-title span strong {
+    padding: 0;
+    font-weight: 600;
+}
+.list-col code {
+    font-size: 12px;
+    background: #dedede;
+}
+
+/*-----------Table-------------*/
+section h2 {
+    color: #a5b1ba;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+table th:first-child {
+    width: 20px;
+}
+
+.table h3{
+    float: left;
+    margin-top: 27px;
+    margin-bottom: 24px;
+}
+.table a{
+    color: #ae4b5d;
+}
+th {
+    background: #9c4757;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 10px;
+}
+td {
+    font-size: 12px;
+    font-weight: normal;
+}
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+th:first-child {
+    border-top-left-radius: 10px;
+}
+th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+td {
+    padding: 10px 20px;
+    background: #282d33;
+    color: #a5adb8;
+}
+tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+tr td:last-child {
+    border-right: none;
+}
+
+/********************FOOTER*************************/
+.footer {
+    border-top: 7px solid #9d5259;
+    background:#1d272b;
+    margin-top: -43px;
+}
+.wrapper-footer-inner{
+    padding:15px 30px;
+}
+.footer___item{
+    width:300px;
+    float:left;
+    padding: 20px 15px;
+
+}
+.heading-title-item{
+    color: #a5adb8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform:capitalize;
+}
+.heading-title-item span{
+    text-transform:uppercase;
+}
+.line-title-item{
+    background: #222b2b;
+    height: 1px;
+    margin: 14px 0 18px 0;
+    box-shadow: 0px 0px 1px rgba(245, 242, 242, 0.5);
+}
+
+.info-item p ,.info-item ul {
+    color: gray;
+    display: inline-block;
+}
+
+.socials{
+    display:inline-block;
+}
+
+
+.socials__item {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin-bottom:-10px;
+    border-radius: 5px;
+}
+.info-item p{
+    color: #85898f;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.icon-clock{
+    width:32px;
+    height:32px;
+    margin-bottom: -11px;
+    display: inline-block;
+    background:url('../img/clock.png') no-repeat center;
+}
+.info-item ul li{
+    color: #85898f;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin:10px 0;
+    position: relative;
+
+}
+.info-item ul .circl:before {
+    content: "\2022";
+    color: #9f5a5c;
+    position: absolute;
+    left: -9px;
+    top: 1px;
+    display: inline-block;
+}
+.info-item p strong {
+    color: #a5adb8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.info-item .info-item__list li a {
+    color: #85898f;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration:none;
+}
+ul .active{
+    text-decoration:underline;
+    color: #d08b98;
+}
+.info-item .info-item__list .active a{
+    color: #d08b98;
+}
+@media screen and (max-width: 768px){
+    .sidebar{
+        display: none;
+    }
+    .content{
+        padding-left: 0px;
+    }
+    .content-posts table tr td,.content-posts table tr th{
+        padding: 5px 5px;
+    }
+    .content .midle {
+        margin: 0px;
+    }
+    .content-wrapper .we-do {
+        text-align: center;
+    }
+    .banner-wrapper .banner-inner-wrapper {
+        padding: 20px 0 20px 20px;
+    }
+}
+@media screen and (max-width: 322px){
+    .content-posts table tr td, .content-posts table tr th {
+        padding: 2px 2px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+<div class="main">
+    <div class="header-wrapper header-bg">
+        <header class="header container clearfix paddding">
+            <div class="logo-wrapper">
+                <a class="logo" href=""><i>s</i>unflower</a>
+                <p class="sub-logo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            </div>
+            <div class="form-serch">
+                <form class="search clearfix">
+                    <input class="input" type="search" placeholder="Search..">
+                    <button type="button" class="submit"><i class="icon-search red"></i></button>
+                </form>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <div class="banner-wrapper banner-bg ">
+            <section class="banner">
+                <div class="banner-inner-wrapper ">
+                    <h1><i class="red">Y</i>ellow field</h1>
+                    <p class="sub-title">have a nice day outdoor</p>
+                    <h2>Today good weather...</h2>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                </div>
+            </section>
+        </div>
+        <div class="nav-wrapper nav-bg clearfix">
+            <ul class="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Sliders</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Styles</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Cherry</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div id="breadcrumbs" class="breadcrumbs">
+            <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Another page</a></li>
+                <li><a href="#" class="active">This page</a></li>
+            </ul>
+        </div>
+        <div class="content-wrapper content-bg clearfix">
+            <aside class="sidebar">
+                <div class="forma">
+                    <form id="contact" action="#" method="post">
+                        <h2>Contact Us</h2>
+                        <fieldset>
+                            <input placeholder="Your name" type="text" tabindex="1" required>
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="Daytime Number" type="text" tabindex="3" required>
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="Email Address" type="email" tabindex="2" required>
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="City" type="text" tabindex="4" required>
+                        </fieldset>
+                        <fieldset>
+                            <label for="prob"></label>
+                            <select id="prob" name="field4">
+                                <option value="fishkeeping">Problem with</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <label for="brand"></label>
+                            <select id="brand" name="field4">
+                                <option value="fishkeeping">Brand</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Lorem ipsum dolor</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="block_text">
+                    <section class="column_text">
+                        <h2 class="title_col">Headline</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commodo <p><a href="">More about</a></p>
+                    </section>
+                </div>
+
+            </aside>
+            <div class="content">
+                <div class="content-wrapper">
+                    <section class="content-posts we-do">
+                        <h2 class="post__headline"><i>W</i>tat we do</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip
+                            ex
+                            ea commodo
+                            consequat. Duis aute irure dolor in <a class="red">reprehenderit in voluptate</a> velit esse
+                            cillum
+                            dolore eu fugiat nulla
+                            pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim
+                            id
+                            est
+                            laborum.</p>
+                        <ul class="list-items">
+                            <li class="inner-item">
+                                <div class="wrapper-inner-item">
+                                    <h3 class="title-item">Admin panel</h3>
+                                    <img src="hands.jpg" alt="фыва" class="item-img">
+                                </div>
+                            </li>
+                            <li class="inner-item midle">
+                                <div class="wrapper-inner-item">
+                                    <h3 class="title-item">Shortcodes</h3>
+                                    <img src="hands.jpg" alt="иеф" class="item-img">
+                                </div>
+                            </li>
+                            <li class="inner-item">
+                                <div class="wrapper-inner-item">
+                                    <h3 class="title-item">Videos</h3>
+                                    <img src="hands.jpg" alt="иет" class="item-img">
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="content-posts list">
+                        <h2 class="post__headline"><i>L</i>ists</h2>
+                        <div class="list-inner-wrapper clearfix">
+                            <div class="list-col">
+                                <div class="list-col-title">
+                                    <span><strong>List style type circle<code> &lt;ul&gt;</code></strong></span>
+                                </div>
+                                <ul>
+                                    <li>Lorem ipsum sit amet</li>
+                                    <li>Duis aute irure dolor</li>
+                                    <li>Excepteur sint occaecat
+                                        <ul class="list-col-inner">
+                                            <li>Duis aute irure dolor in reprehenderit in</li>
+                                            <li>Duis aute irure dolor in reprehenderit in</li>
+                                            <li>Duis aute irure dolor in reprehenderit in</li>
+                                        </ul></li>
+                                    <li>Duis aute irure dolor in reprehenderit in</li>
+                                    <li>Duis aute irure dolor in reprehenderit in</li>
+                                </ul>
+                            </div>
+                            <div class="list-col">
+                                <div class="list-col-title">
+                                    <span><strong class="list_ul">Unstyled <code> &lt;ul class="unstyled"&gt;</code></strong></span>
+                                </div>
+                                <ul>
+                                    <li class="unstyled">Lorem ipsum dolor sit amet</li>
+                                    <li class="unstyled">Duis aute irure dolor</li>
+                                    <li class="unstyled">Excepteur sint occaecat
+                                        <ul class="list-col-inner">
+                                            <li>Duis aute irure dolor in reprehenderit in</li>
+                                            <li>Duis aute irure dolor in reprehenderit in</li>
+                                            <li>Duis aute irure dolor in reprehenderit in</li>
+                                        </ul>
+                                    </li>
+                                    <li class="unstyled">Duis aute irure dolor in reprehenderit in</li>
+                                    <li class="unstyled">Duis aute irure dolor in reprehenderit in</li>
+                                </ul>
+                            </div>
+                            <div class="list-col">
+                                <div class="list-col-title">
+                                    <span><strong>Ordered<code> &lt;ol&gt;</code></strong></span>
+                                </div>
+                                <ol class="decimal">
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Duis aute irure dolor</li>
+                                    <li>Excepteur sint occaecat</li>
+                                    <li>Duis aute irure dolor in reprehenderit in</li>
+                                    <li>Duis aute irure dolor in reprehenderit in</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content-posts tables">
+                        <h2 class="post__headline"><i>T</i>able</h2>
+                        <table class="table">
+                            <tr>
+                                <th>№</th>
+                                <th>Toranton rate</th>
+                                <th>Puranocak var berond</th>
+                                <th>Intime modular to cavan</th>
+                                <th>Language</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Lorem ipsum</td>
+                                <td>Consectetur adipiscing elit</td>
+                                <td>Consectetur adipiscing</td>
+                                <td><a href="">Lorem ipsum</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Modul caram</td>
+                                <td>Remation vore undocost</td>
+                                <td>Remation vore undocost</td>
+                                <td><a href="">Modul caram</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Jacon van dor</td>
+                                <td>Executive live anothre vy</td>
+                                <td>Executive live anothre</td>
+                                <td><a href="">Jacon van dor</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Victorian mor</td>
+                                <td>Untable via costario more</td>
+                                <td>Untable via costario more</td>
+                                <td><a href="">Victorian mor</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Inpuction mian</td>
+                                <td>Nastiro macon puratece</td>
+                                <td>Nastiro macon puratece</td>
+                                <td><a href="">Inpuction mian</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Povatior naron</td>
+                                <td>Gover nate foracent pore</td>
+                                <td>Gover nate foracent</td>
+                                <td><a href="">Povatior naron</a></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Inbug for cars</td>
+                                <td>Overview cal the montre</td>
+                                <td>Overview cal the montre</td>
+                                <td><a href="">Inbug for cars</a></td>
+                            </tr>
+
+                        </table>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer" class="footer">
+    <div class="wrapper-footer-inner container">
+        <div class="footer-inner__item clearfix">
+            <div class="footer___item">
+                <h3 class="heading-title-item"><span><i class="red">c</i>herry</span> hours</h3>
+                <div class="line-title-item"></div>
+                <div class="info-item">
+                    <p>Our Los Angeles 24/7</p>
+                    <p><span class="icon-clock"></span>Our Los Angeles location</p>
+                    <p><span class="icon-clock"></span>Our Los Angeles location</p>
+                    <p><span class="icon-clock"></span>ur Los Angeles location</p>
+                </div>
+
+            </div>
+            <div class="footer___item">
+                <div class="heading-title-item ">
+                    local <span><i class="red">c</i>herry</span>
+                    <div class="line-title-item"></div>
+                    <div class="info-item">
+                        <ul>
+                            <li class="circl">West Hollywood (323) 221-1107</li>
+                            <li class="circl">Beverly Hills (310) 202-5428</li>
+                            <li class="circl">Pasadena (626) 296-2664</li>
+                            <li class="circl">West Hills (805) 531-5083</li>
+                            <li class="circl">Los Angeles (213) 389-4381</li>
+                        </ul>
+                        <p><strong>Call Us Toll Free 1-800-287-0919</strong></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer___item">
+                <div class="heading-title-item text-style-cap">
+                    Our Los Angeles location
+                    <div class="line-title-item"></div>
+                    <div class="info-item">
+                        <ul class="info-item__list">
+                            <li><a href="#">Steve Smith</a></li>
+                            <li><a href="#">Hi-Tech Cherry Company</a></li>
+                            <li class="active"><a  class="red" href="#">info@cherrycompany.com</a></li>
+                            <li><a href="#">5104 W. Washington Blvd</a></li>
+                            <li><a href="#">Los Angeles , CA , 90016 United States</a></li>
+                            <li><a href="#">(800) 287-0919</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>
