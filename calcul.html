@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	
+
+	<style type="text/css">
+		#calc {
+			width: 333px;
+			border: 11px solid navy;
+			border-radius: 11px;
+			margin: 0 auto;
+		}
+		#inCalc {
+			width: 327px;
+			height: 77px;
+			margin: 0 auto;
+			font-size: 44px;
+			color: green;
+		}
+		#clear {
+			width: 333px;
+		}
+		#clear:hover {
+			background: yellow;
+		}
+		.button {
+			font-size: 22px;
+			font-weight: bolder;
+			width: 108px;
+			height: 44px;
+			margin-top: 0.5rem;
+			border: 2px solid red;
+			border-radius: 12px;
+		}
+		.button:hover {
+			background-color: red;
+			transform: scale(1.1, 1.1);
+		}
+
+	</style>
+</head>
+<body>
+	<div id="calc">
+			<input type="text" id="inCalc" readonly>
+			<button class="button" id="one">1</button>
+			<button class="button" id="two">2</button>
+			<button class="button" id="three">3</button>
+			<button class="button" id="four">4</button>
+			<button class="button" id="five">5</button>
+			<button class="button" id="six">6</button>
+			<button class="button" id="seven">7</button>
+			<button class="button" id="eight">8</button>
+			<button class="button" id="nine">9</button>
+			<button class="button" id="zero">0</button>
+			<button class="button" id="plus">+</button>
+			<button class="button" id="minus">-</button>
+			<button class="button" id="multiply">*</button>
+			<button class="button" id="divide">/</button>
+			<button class="button" id="equally">=</button>
+			<button class="button" id="clear">Clear</button>
+		</div>
+
+
+
+		<script>
+
+		var one = document.getElementById('one');
+		var two = document.getElementById('two');
+		var three = document.getElementById('three');
+		var four = document.getElementById('four');
+		var five = document.getElementById('five');
+		var six = document.getElementById('six');
+		var seven = document.getElementById('seven');
+		var eight = document.getElementById('eight');
+		var nine = document.getElementById('nine');
+		var zero = document.getElementById('zero');
+		var plus = document.getElementById('plus');
+		var minus = document.getElementById('minus');
+		var multiply = document.getElementById('multiply');
+		var divide = document.getElementById('divide');
+		var eq = document.getElementById('equally');
+		var input = document.getElementById('inCalc');
+		var clear = document.getElementById('clear');
+
+		one.addEventListener('click', function() {
+			input.value+=1;
+		});
+		two.addEventListener('click', function() {
+			input.value+=2;
+		});
+		three.addEventListener('click', function() {
+			input.value+=3;
+		});
+		four.addEventListener('click', function() {
+			input.value+=4;
+		});
+		five.addEventListener('click', function() {
+			input.value+=5;
+		});
+		six.addEventListener('click', function() {
+			input.value+=6;
+		});
+		seven.addEventListener('click', function() {
+			input.value+=7;
+		});
+		eight.addEventListener('click', function() {
+			input.value+=8;
+		});
+		nine.addEventListener('click', function() {
+			input.value+=9;
+		});
+		zero.addEventListener('click', function() {
+			input.value+=0;
+		});
+		plus.addEventListener('click', function() {
+			input.value+='+';
+		});
+		minus.addEventListener('click', function() {
+			input.value+='-';
+		});
+		multiply.addEventListener('click', function() {
+			input.value+='*';
+		});
+		divide.addEventListener('click', function() {
+			input.value+='/';
+		});
+		eq.addEventListener('click', function() {
+			var result = eval(input.value);
+			input.value = result;
+		});
+		clear.addEventListener('click', function() {
+			input.value = '';
+		});
+		
+	</script>
+
+</body>
+</html>
