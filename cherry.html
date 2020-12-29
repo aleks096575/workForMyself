@@ -1,25 +1,84 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <link rel="stylesheet" href="./css/style.css">
-   <link rel="stylesheet" href="./css/main.css">
-   <title>Cherry</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/main.css">
+<title>Cherry</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-   <style>
+<style>
 
    *{
    margin:0;
    padding: 0;
    box-sizing: border-box;
 }
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
 
 
 /* HTML5 display-role reset for older browsers */
@@ -396,7 +455,7 @@ fieldset {
     border: 1px solid #aaa;
 }
 .block_text {
-    width: 215px;
+    width: 245px;
     height: 190px;
     margin-top: 25px;
     margin-left: 22px;
@@ -444,7 +503,7 @@ fieldset {
 .wrapper-inner-item img {
     border: 1px solid white;
     box-shadow: 0 7px 7px #bbbbbb;
-    max-width: 500px;
+    max-width: 400px;
 }
 a.red{
     text-decoration: underline;
@@ -506,7 +565,7 @@ list_ul {
     list-style: none;
 }
 ul li .list-col-inner{
-    padding-left:20px;
+    padding-left: 20px;
 }
 
 .list-col-title span strong {
@@ -682,8 +741,26 @@ ul .active{
 .info-item .info-item__list .active a{
     color: #d08b98;
 }
+#more {
+	display: inline-block;
+	cursor: pointer;
+    text-shadow: 1px 1px 2px black;
+    font-size: 16px;
+    width: 177px;
+    background: #a9212a;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 5px 5px #d0d1d1;
+    border: 5px solid white;
+    margin: 0 -13px 0px;
+    text-decoration: none;
+}
+#more:hover {
+	transform: skew(2.05, 1.05);
+	background: green;
+}
 @media screen and (max-width: 768px){
-    .sidebar{
+    .sidebarr{
         display: none;
     }
     .content{
@@ -717,16 +794,32 @@ ul .active{
         <header class="header container clearfix paddding">
             <div class="logo-wrapper">
                 <a class="logo" href=""><i>s</i>unflower</a>
-                <p class="sub-logo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                <p class="sub-logo">Wonderful flowing that is the sunflower have been greatest viewed about sight</p>
             </div>
             <div class="form-serch">
                 <form class="search clearfix">
-                    <input class="input" type="search" placeholder="Search..">
+                    <input class="input" type="search" placeholder="Search...">
                     <button type="button" class="submit"><i class="icon-search red"></i></button>
                 </form>
             </div>
         </header>
     </div>
+
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Menu</button> 
+</div>
+
+
+
     <div class="container">
         <div class="banner-wrapper banner-bg ">
             <section class="banner">
@@ -760,7 +853,7 @@ ul .active{
             </ul>
         </div>
         <div class="content-wrapper content-bg clearfix">
-            <aside class="sidebar">
+            <aside class="sidebarr">
                 <div class="forma">
                     <form id="contact" action="#" method="post">
                         <h2>Contact Us</h2>
@@ -789,7 +882,7 @@ ul .active{
                             </select>
                         </fieldset>
                         <fieldset>
-                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Lorem ipsum dolor</button>
+                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Sending</button>
                         </fieldset>
                     </form>
                 </div>
@@ -799,6 +892,7 @@ ul .active{
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                             aliquip ex ea commodo <p><a href="">More about</a></p>
+                            <button type="submit"  id="more"><a href="">More about</a></button>
                     </section>
                 </div>
 
@@ -1016,5 +1110,20 @@ ul .active{
 
     </div>
 </footer>
+
+<script>
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "170px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+</script>
+
 </body>
 </html>
