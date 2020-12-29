@@ -30,7 +30,7 @@
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: .5s;
   padding-top: 60px;
 }
 
@@ -70,8 +70,9 @@
 
 #main {
   transition: margin-left .5s;
-  padding: 16px;
-  position: fixed;
+  padding: 12px;
+  position: sticky;
+  top: 0;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -1115,8 +1116,8 @@ ul .active{
 <script>
 
 function openNav() {
-  document.getElementById("mySidebar").style.width = "190px";
-  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("mySidebar").style.width = "170px";
+  document.getElementById("main").style.marginLeft = "2px";
 }
 
 function closeNav() {
