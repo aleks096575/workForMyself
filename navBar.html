@@ -196,6 +196,25 @@ h3 {
   text-transform: uppercase;
   margin-top: 30px;
 }
+.tree {
+  background-color: gold;
+  width: 100px;
+  height: 50px;
+  color: maroon;
+  display: block;
+  border: 2px solid navy;
+  margin-left: 2rem;
+  margin-bottom: 15px;
+  font-size: 23px;
+  overflow: hidden;
+  font-weight: bolder;
+  border-radius: 9px;
+}
+
+.tree:hover {
+  background-color: red;
+  transform: scale(1.1, 1.1);
+}
 </style>
 
 </head>
@@ -216,7 +235,7 @@ h3 {
   <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
 </div>
 
-<section style="display: flex; align-items: center; justify-content: center; color: navy; font-weight: bold; margin-left: 50%; height: 50px; width: 100px; background: yellow; border: 2px dashed navy; ">
+<section id="aaa" style="display: flex; align-items: center; justify-content: center; color: navy; font-weight: bold; margin-left: 50%; height: 50px; width: 100px; background: yellow; border: 2px dashed navy; ">
 </section>
 
 <script>
@@ -230,6 +249,21 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
+
+
+function gr() {
+document.body.style.backgroundColor = 'green';
+}
+
+function gp() {
+document.body.style.backgroundColor = '';
+}
+
+
+function fff() {
+  document.getElementById("aaa").style.display = "none"
+}
+
 
 </script>
    
@@ -246,6 +280,10 @@ function closeNav() {
   </div>
   <h3>hover to pause</h3>
 </div>
+
+<button class="tree" onclick="gr();">Green</button>
+<button class="tree" onclick="gp();">White</button>
+<button class="tree" onclick="fff();">Hide</button>
 
 </body>
 </html> 
