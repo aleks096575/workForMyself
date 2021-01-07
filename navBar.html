@@ -252,8 +252,8 @@ h3 {
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <a href="#">About</a>
   <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="#" id="bba">Clients</a>
+  <a href="#" id="aab">Contact</a>
 </div>
 
 <div id="main">
@@ -289,6 +289,11 @@ function fff() {
   document.getElementById("aaa").style.display = "none"
 }
 
+function ds() {
+  document.getElementById("aab").style.color = "red"
+}
+
+
 
 </script>
    
@@ -322,6 +327,7 @@ function fff() {
  ttt.addEventListener('mouseout', function() {
     document.body.style.backgroundColor = 'maroon';
   }); 
+ bba.addEventListener('click', ds);
 
 </script>
 </body>
