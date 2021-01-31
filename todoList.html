@@ -10,7 +10,7 @@
 			box-sizing: border-box;
 		}
 		main {
-			max-width: 50rem;
+			max-width: 70rem;
 			margin: 0 auto;
 			display: flex;
 			flex-direction: column;
@@ -92,18 +92,131 @@
 			font-size: 16px;
 			cursor: pointer;
 			transition: 0.3s;
+			overflow: hidden;
 		}
 		.addBtn:hover {
 			background-color: #bbb;
 		}
+		.wrapper {
+			width: 100%;
+			margin: 0 auto;
+		}
+		.tabs-nav {
+			display: flex;
+			justify-content: space-between;
+		}
+		.tabs-nav__item {
+			text-align: center;
+			color: maroon;
+			font-size: 33px;
+			font-weight: bolder;
+			padding: 20px;
+			flex: 1;
+			border-bottom: 1px solid transparent;
+			cursor: pointer;
+		}
+		.tabs-nav__item.is-active {
+			border-bottom: 9px solid #55a32a;
 
+		}
+		.tab {
+			background-color: #f2f2f2;
+			display: none;
+			padding: 20px;
+		}
+		.tab.is-active {
+			display: block;
+			height: 30rem;
+		}
+		#passs {
+			box-sizing: border-box;
+			width: 100%;
+			font-size: 18px;
+			border: none;
+			padding: 11px;
+			border-radius: 3px;
+			letter-spacing: 1px;
+			box-shadow: 0 5px 30px rgba(22,89,233,0.4);
+		}
+		::placeholder {
+			color: green;
+			font-weight: 444;
+		}
+		#wraa {
+			position: relative;
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+			width: 44vw;
+			border: 3px solid navy;
+		}
+		#eye {
+			position: absolute;
+			right: 15px;
+			transform: translate(0, -50%);
+			top: 50%;
+			cursor: pointer;
+		}
+		
+		fa {
+			font-size: 23px;
+			color: magenta;
+		}
+		.shell {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		
+		.btnn {
+			width: 80px;
+			height: 40px;
+			background: gray;
+			border-radius: 30px;
+			padding: 5px;
+			transition: all 500ms ease-in-out;
+		}
+		.btnn > .circle {
+			width: 40px;
+			height: 40px;
+			background: white;
+			border-radius: 50%;
+			transition: all 500ms ease-in-out;
+		}
+		.btnn.act {
+			background: green;
+		}
+		.btnn.act > .circle {
+			margin-left: 40px;
+		}
+		
 	</style>
 </head>
 <body>
 
-	<main>
+<main>
+	<div class="wrapper">
+	  <div class="tabs">
+		<div class="tabs__nav tabs-nav">
 
-	<div id="myDiv" class="header">
+		<div class="tabs-nav__item is-active"  data-tab-name="tab-3">Tab 3</div>
+
+			<div class="tabs-nav__item" data-tab-name="tab-4">Tab 4</div>
+
+		</div>
+
+		<div class="tabs__content">
+
+		<div class="tab is-active tab-3">
+			
+			<div id="wraa">
+			<input type="password" placeholder="Password" id="passs">
+			<span id="eye">
+				<i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+			</span>
+			
+			<div id="myDiv" class="header">
 		<h2>To Do app</h2>
 		<input type="text" id="myInput" placeholder="Title">
 		<span class="addBtn" onclick="newElement()">Add</span>
@@ -116,6 +229,23 @@
 		<li>Task 4</li>
 		<li>Task 5</li>
 	</ul>
+		</div>
+	</div>
+
+		<div class="tab tab-4">
+			<h1>Forteen text</h1>
+			<div class="shell">
+				<div class="btnn" onclick="this.classList.toggle('act')">
+					<div class="circle"></div>
+				</div>
+			</div>
+			<div id="info"></div>
+		</div>
+	</div>
+</div>
+</div>
+
+	
 
 	</main>
 
@@ -174,6 +304,51 @@
 	 	}
 	  }
 	}
+
+	let tab = function() {
+	let tabNav = document.querySelectorAll('.tabs-nav__item'),
+	tabContent = document.querySelectorAll('.tab'),
+	tabName;
+	tabNav.forEach(item => {
+		item.addEventListener('click', selectTabNav)
+	});
+
+	function selectTabNav() {
+		tabNav.forEach(item => {
+			item.classList.remove('is-active');
+		});
+		this.classList.add('is-active');
+		tabName = this.getAttribute('data-tab-name');
+		selectTabContent(tabName);
+		console.log(tabNav);
+	}
+	function selectTabContent(tabName) {
+		tabContent.forEach(item => {
+			item.classList.contains(tabName) ? item.classList.add('is-active') : 
+			item.classList.remove('is-active');
+		})
+	}
+};
+
+tab();
+
+var inf = document.getElementById('info');
+console.log(window.location);
+inf.textContent += 'Size this page: ' + window.outerWidth + ' on ' + window.outerHeight;
+
+var staa = false;
+function toggle() {
+		document.getElementById('passs').setAttribute("type", "password");
+		document.getElementById("eye").style.color='green';
+		staa = false;
+	if (staa) {
+	}
+	else{
+		document.getElementById('passs').setAttribute("type", "text");
+		document.getElementById("eye").style.color='maroon';
+		staa = true;
+	}
+}
 
 	</script>
 	
