@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<input type="text" id="in">
+	<button id="add">Add</button>
+	<hr>
+	<div id="out"></div>
+
+	<script type="text/javascript">
+
+		var todoList = [];
+		if(localStorage.getItem('todo')!=undefined) {
+			todoList = JSON.parse(localStorage.getItem('todo'));
+			out();
+		}
+
+		
+		document.getElementById('add').onclick = function() {
+			var d = document.getElementById('in').value;
+			var temp = {};
+			temp.todo = d;
+			temp.check = false;
+			var i = todoList.length;
+			todoList[i] = temp;
+			console.log(temp);
+			out();
+			localStorage.setItem('todo', JSON.stringify(todoList));
+		}
+
+		function out() {
+			var ut = '';
+			for(var key in todoList) {
+				if(todoList[key].check === true) {
+					ut += '<input type="checkbox" checked>';
+				}
+				else {
+					ut += '<input type="checkbox">';
+				}
+				ut += todoList[key].todo + '<br>';
+				document.getElementById('out').innerHTML = ut;
+			}
+		
+		}
+
+	</script>
+	
+</body>
+</html>
