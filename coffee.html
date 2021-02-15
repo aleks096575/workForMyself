@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		console.clear();
+
+// базовый класс
+function DomesticDevice(brand, model) {
+	let isOn = false;
+	
+	this.onOff = function() {
+		isOn = !isOn;
+	};
+	
+	this._showIsOn = () => isOn;
+	
+	this.showInfo = function() {
+		return {
+			brand,
+			model
+		};
+	}
+}
+
+function CoffeeMachine(brand, model, initialVolume) {
+	 // наследование от базового класса DomesticDevice
+	DomesticDevice.call(this, brand, model);
+	
+	let volumes = {
+		max: initialVolume,
+		current: 0,
+		cup: 100
+	};
+	
+	this.fillWater = function(value) {
+		if (value > volumes.max) {
+			alert(`Maximum volume is ${volumes.max}`);
+			throw new Error(`Maximum volume is ${volumes.max}`);
+		}
+		
+		if (value < volumes.cup) {
+			alert(`Minimum volume is ${volumes.cup}`);
+			throw new Error(`Minimum volume is ${volumes.cup}`);
+		}
+		
+		volumes.current = value;
+	}
+	
+	this.makeCup = function() {
+		if (!this._showIsOn()) {
+			alert('You need to turn me on');
+			// console.warn('You need to turn me on');
+			// return;
+			throw new Error('You need to turn me on');
+		}
+		
+		if (volumes.current < volumes.cup) {
+			alert('You need to fill the tank');
+			throw new Error('You need to fill the tank');
+		}
+		
+		
+		if (volumes.current >= volumes.cup) {
+			alert('Your coffee is ready. Have a nice day!');
+			volumes.current -= volumes.cup;
+		}		
+	}
+}
+
+/* --------------- использование классов --------------- */
+
+let instance = new CoffeeMachine('bosch', 'X2', 1000);
+debugger
+instance.fillWater(200);
+instance.onOff();
+instance.makeCup();
+instance.makeCup();
+instance.fillWater(200);
+instance.makeCup();
+		
+	</script>
+	
+</body>
+</html>
